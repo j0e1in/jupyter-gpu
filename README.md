@@ -6,7 +6,7 @@ Jupyter docker image that supports Nvidia GPU
 - Jupyter server with password
 - Nvidia GPU
 - Tensorflow-gpu
-- Mounted host directory (default is `./notebooks`)
+- Mounted host directory (default is `../notebooks`)
 
 ## Usage
 
