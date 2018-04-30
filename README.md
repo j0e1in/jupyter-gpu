@@ -17,7 +17,14 @@ git clone https://github.com/j0e1in/jupyter-gpu
 
 2. Edit `python_packages.txt` to configure the packages you need
 
-3. Set jupyter server password in `start_jupyter.sh` (recommended)
+3. Set jupyter server password in `jupyter_notebook_config.py` (recommended)
+   You can generate a hash password with python:
+``` py
+>>> from notebook.auth import passwd
+>>> passwd()
+Enter password:
+Verify password:
+```
 
 4. Build and start
 ``` sh
