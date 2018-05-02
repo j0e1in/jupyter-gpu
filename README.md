@@ -7,6 +7,7 @@ Jupyter docker image that supports Nvidia GPU
 - Nvidia GPU
 - Tensorflow-gpu
 - Mounted host directory (default is `../notebooks`)
+- SSL
 
 ## Usage
 
@@ -37,6 +38,3 @@ $ ./scripts/build.sh
 # Start jupyter server
 $ ./scripts/start_jupyter.sh
 ```
-
-## Todo
- - Add SSL support
