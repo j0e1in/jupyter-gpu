@@ -1,5 +1,17 @@
 # Configuration file for jupyter-notebook.
 
+## Hashed password to use for web authentication.
+#
+#  To generate, type in a python/IPython shell:
+#
+#    from notebook.auth import passwd; passwd()
+#
+#  The string should be of the form type:salt:hashed-password.
+c.NotebookApp.password = ''
+
+## The port the notebook server will listen on.
+c.NotebookApp.port = 8888
+
 #------------------------------------------------------------------------------
 # Application(SingletonConfigurable) configuration
 #------------------------------------------------------------------------------
@@ -217,16 +229,7 @@ c.NotebookApp.ip = '0.0.0.0'
 #  platform dependent and determined by the python standard library `webbrowser`
 #  module, unless it is overridden using the --browser (NotebookApp.browser)
 #  configuration option.
-#c.NotebookApp.open_browser = True
-
-## Hashed password to use for web authentication.
-#
-#  To generate, type in a python/IPython shell:
-#
-#    from notebook.auth import passwd; passwd()
-#
-#  The string should be of the form type:salt:hashed-password.
-c.NotebookApp.password = ''
+c.NotebookApp.open_browser = False
 
 ## Forces users to use a password for the Notebook server. This is useful in a
 #  multi user environment, for instance when everybody in the LAN can access each
@@ -235,9 +238,6 @@ c.NotebookApp.password = ''
 #  In such a case, server the notebook server on localhost is not secure since
 #  any user can connect to the notebook server via ssh.
 c.NotebookApp.password_required = True
-
-## The port the notebook server will listen on.
-c.NotebookApp.port = 8888
 
 ## The number of additional ports to try if the specified port is not available.
 #c.NotebookApp.port_retries = 50
