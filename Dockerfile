@@ -95,6 +95,9 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 # ===============================================================================
+RUN useradd -ms /bin/bash admin
+USER admin
+
 RUN pip install -U pip
 RUN pip --no-cache-dir install \
   bleach==1.5.0 \
