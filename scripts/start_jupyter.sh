@@ -5,7 +5,7 @@ NOTEBOOK_DIR="$PWD/../notebooks"
 CERT="$PWD/private/fullchain.pem"
 KEY="$PWD/private/privkey.pem"
 
-nvidia-docker run \
+nvidia-docker run -d \
 --name jupyter_gpu \
 --net host \
 -v $CONFIG:/config.py:ro \
