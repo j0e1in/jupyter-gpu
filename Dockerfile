@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libssl-dev \
   libsqlite3-dev
 
-# Install python 3.6.5
+# Install python 3.6.6
 # ===============================================================================
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV GPG_KEY 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
-ENV PYTHON_VERSION 3.6.5
+ENV PYTHON_VERSION 3.6.6
 
 RUN set -ex \
 	&& buildDeps=' \
@@ -95,7 +95,7 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 # ===============================================================================
-
+RUN pip install -U pip
 RUN pip --no-cache-dir install \
   bleach==1.5.0 \
   ipykernel \
