@@ -4,10 +4,12 @@ CONFIG="$PWD/jupyter_notebook_config.py"
 NOTEBOOK_DIR="$PWD/../notebooks"
 CERT="$PWD/private/fullchain.pem"
 KEY="$PWD/private/privkey.pem"
+PORT=8888
 
 nvidia-docker run -d \
 --name jupyter_gpu \
 --net host \
+-p $PORT:$PORT
 -v $CONFIG:/config.py:ro \
 -v $CERT:/private/cert.pem:ro \
 -v $KEY:/private/key.pem:ro \
