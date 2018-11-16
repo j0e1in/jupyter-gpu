@@ -5,7 +5,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   wget \
   openssl \
   libssl-dev \
-  libsqlite3-dev
+  libsqlite3-dev \
+  libgomp1
 
 # Install python 3.6.6
 # ===============================================================================
