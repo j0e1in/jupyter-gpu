@@ -68,7 +68,7 @@
 c.NotebookApp.allow_password_change = False
 
 ## Whether to allow the user to run the notebook as root.
-c.NotebookApp.allow_root = True
+c.NotebookApp.allow_root = False
 
 ## DEPRECATED use base_url
 #c.NotebookApp.base_project_url = '/'
@@ -237,7 +237,7 @@ c.NotebookApp.password = ''
 c.NotebookApp.password_required = True
 
 ## The port the notebook server will listen on.
-#c.NotebookApp.port = 8888
+c.NotebookApp.port = 8888
 
 ## The number of additional ports to try if the specified port is not available.
 #c.NotebookApp.port_retries = 50
