@@ -21,4 +21,5 @@ jupyter-gpu \
 jupyter notebook \
 --config=/config.py \
 --certfile=/private/cert.pem \
---keyfile=/private/key.pem
+--keyfile=/private/key.pem \
+--allow-root
